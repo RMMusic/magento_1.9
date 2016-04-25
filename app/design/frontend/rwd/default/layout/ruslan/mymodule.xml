@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.0.1">
+    <cms_index_index>
+        <reference name="content">
+            <block type="rus/myblock" name="ruslan_myblock" template="ruslan/myblock.phtml" />
+        </reference>
+    </cms_index_index>
+</layout>

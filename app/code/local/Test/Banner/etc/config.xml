@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Test_Banner>
+            <version>0.0.1</version>
+        </Test_Banner>
+    </modules>
+    <global>
+        <blocks>
+            <test_banner>
+                <class>Test_Banner_Block</class>
+            </test_banner>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <test_banner>
+                    <file>test_banner.xml</file>
+                </test_banner>
+            </updates>
+        </layout>
+    </frontend>
+</config>

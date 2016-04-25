@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ruslan_Module>
+            <version>0.0.1</version>    <!-- Version number of your module -->
+        </Ruslan_Module>
+    </modules>
+    <global>
+        <blocks>
+            <rus>
+                <class>Ruslan_Moduleone_Block</class>
+            </rus>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <ruslan_moduleone>
+                    <file>ruslan/mymodule.xml</file>
+                </ruslan_moduleone>
+            </updates>
+        </layout>
+        <routers>
+            <ruslan_module>
+                <use>standard</use>
+                <args>
+                    <module>Ruslan_Moduleone</module>
+                    <frontName>module</frontName>
+                </args>
+            </ruslan_module>
+        </routers>
+    </frontend>
+</config>

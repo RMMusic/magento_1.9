@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.0.1">
+<cms_index_index>
+    <reference name="content">
+        <block type="test_banner/banner" name="test.banner.banner" template="test/banner/banner.phtml" />
+    </reference>
+</cms_index_index>
+</layout>
