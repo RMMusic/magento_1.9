@@ -5,4 +5,9 @@
             <block type="rus/myblock" name="ruslan_myblock" template="ruslan/myblock.phtml" />
         </reference>
     </cms_index_index>
+    <ruslan_module_index_second>
+        <reference name="content">
+            <block type="rus/myblock" name="ruslan_myblock" template="ruslan/myblock.phtml" />
+        </reference>
+    </ruslan_module_index_second>
 </layout>

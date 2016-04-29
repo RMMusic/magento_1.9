@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ruslan_Balance>
+            <version>0.0.1</version>
+        </Ruslan_Balance>
+    </modules>
+    <adminhtml>
+        <menu>
+            <balance module="balance">
+                <title>Employee</title>
+                <sort_order>71</sort_order>
+                <children>
+                    <items module="balance">
+                        <title>Manage Employees</title>
+                        <sort_order>0</sort_order>
+                        <action>balance/adminhtml_employee</action>
+                    </items>
+                </children>
+            </balance>
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <Excellence_Employee>
+                            <title>Employee Module</title>
+                            <sort_order>10</sort_order>
+                        </Excellence_Employee>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <employee>
+                    <file>employee.xml</file>
+                </employee>
+            </updates>
+        </layout>
+    </adminhtml>
+    <global>
+        <helpers>
+            <ruslan_balance>
+                <class>Ruslan_Balance_Helper</class>
+            </ruslan_balance>
+        </helpers>
+    </global>
+</config>

@@ -6,11 +6,43 @@
         </Ruslan_Module>
     </modules>
     <global>
+        <helpers>
+            <ruslan_moduleone>
+                <class>Ruslan_Moduleone_Helper</class>
+            </ruslan_moduleone>
+        </helpers>
         <blocks>
             <rus>
                 <class>Ruslan_Moduleone_Block</class>
             </rus>
         </blocks>
+        <models>
+            <adminhtml>
+                <rewrite>
+                    <system_config_source_yesno>Ruslan_Moduleone_Model_System_Config_Source_Yesno</system_config_source_yesno>
+                </rewrite>
+            </adminhtml>
+            <onemodel>
+                <class>Ruslan_Moduleone_Model</class>
+                <resourceModel>onemodel_resource</resourceModel>
+            </onemodel>
+            <onemodel_resource>
+                <class>Ruslan_Moduleone_Model_Resource</class>
+                <entities>
+                    <any>
+                        <table>any_table</table>
+                    </any>
+                </entities>
+            </onemodel_resource>
+        </models>
+        <resources>
+            <ruslan_moduleone_setup>
+                <setup>
+                    <module>Ruslan_Moduleone</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+            </ruslan_moduleone_setup>
+        </resources>
     </global>
     <frontend>
         <layout>

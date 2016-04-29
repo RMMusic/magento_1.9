@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Test_Banner>
-            <active>false</active>
+        <Ruslan_Rem>
+            <active>true</active>
             <codePool>local</codePool>
-        </Test_Banner>
+        </Ruslan_Rem>
     </modules>
 </config>
