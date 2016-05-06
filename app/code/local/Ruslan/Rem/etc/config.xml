@@ -11,6 +11,11 @@
             <ruslan_rem>
                 <class>Ruslan_Rem_Block</class>
             </ruslan_rem>
+            <catalog>
+                <rewrite>
+                    <product_price>Ruslan_Rem_Block_Catalog_Product_View_Price</product_price>
+                </rewrite>
+            </catalog>
         </blocks>
         <models>
             <ruslan_rem>
@@ -47,6 +52,17 @@
     </global>
 
     <frontend>
+        <events>
+            <catalog_product_get_final_price>
+                <observers>
+                    <ruslan_rem_module_observer>
+                        <!--<class>Ruslan_Rem_Model_Observer</class>-->
+                        <class>ruslan_rem/observer</class>
+                        <method>changePrice</method>
+                    </ruslan_rem_module_observer>
+                </observers>
+            </catalog_product_get_final_price>
+        </events>
         <routers>
             <ruslan_rem>
                 <use>standard</use>

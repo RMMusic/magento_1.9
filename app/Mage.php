@@ -447,6 +447,7 @@ final class Mage
         Varien_Profiler::start('DISPATCH EVENT:'.$name);
         $result = self::app()->dispatchEvent($name, $data);
         Varien_Profiler::stop('DISPATCH EVENT:'.$name);
+//        Mage::log($name, null, 'event_list.log', true);
         return $result;
     }
 
