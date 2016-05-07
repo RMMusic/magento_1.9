@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<config>
+<!--******************************-->
+    <modules>
+        <Ruslan_Admingrid>
+            <version>0.0.1</version>
+        </Ruslan_Admingrid>
+    </modules>
+<!--******************************-->
+    <global>
+        <blocks>
+            <ruslan_admingrid>
+                <!-- Set a block definition and lookup directory -->
+                <class>Ruslan_Admingrid_Block</class>
+            </ruslan_admingrid>
+        </blocks>
+        <helpers>
+            <ruslan_admingrid>
+                <!-- Helper definition needed by Magento -->
+                <class>Ruslan_Admingrid_Helper</class>
+            </ruslan_admingrid>
+        </helpers>
+        <models>
+            <ruslan_admingrid>
+                <!-- This is where we define our model directory -->
+                <class>Ruslan_Admingrid_Model</class>
+                <!-- Define a resource to create a custom table -->
+                <resourceModel>ruslan_admingrid_mysql</resourceModel>
+            </ruslan_admingrid>
+
+            <!-- Here's our resource model we'll use to create a database table -->
+            <ruslan_admingrid_mysql>
+                <class>Ruslan_Admingrid_Model_Mysql</class>
+                <entities>
+                    <!-- Let's define our table, we'll call it with the baz name, but the real table is foo_bar_baz -->
+                    <!-- After we define our entity, we can call it with our model by calling foo_bar/baz -->
+                    <baz>
+                        <table>ruslan_admingrid_baz</table>
+                    </baz>
+                </entities>
+            </ruslan_admingrid_mysql>
+        </models>
+
+        <!-- And finally we define our resource setup script -->
+        <resources>
+            <ruslan_admingrid_setup>
+                <setup>
+                    <module>Ruslan_Admingrid</module>
+                </setup>
+            </ruslan_admingrid_setup>
+        </resources>
+    </global>
+<!--******************************-->
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <foo_bar before="Mage_Adminhtml">Ruslan_Admingrid_Adminhtml</foo_bar>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+<!--******************************-->
+    <adminhtml>
+        <layout>
+            <updates>
+                <ruslan_admingrid>
+                    <!--
+                    We again keep a nice naming convention and make our module upgrade proof by placing it in a separate folder
+                    - Since we are in the adminhtml node, this will look for the XML file in the app/design/adminhtml/default/default root folder
+                    -->
+                    <file>ruslan/admingrid.xml</file>
+                </ruslan_admingrid>
+            </updates>
+        </layout>
+    </adminhtml>
+<!--******************************-->
+</config>
